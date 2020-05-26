@@ -1,0 +1,11 @@
+<form (ngSubmit)="login()">
+  <p>
+    <input type="text" placeholder="รหัสพนักงาน" [(ngModel)]="credential.USERNAME" name="USERNAME" required autocomplete="off">
+  </p>
+  <p>
+    <input type="password" placeholder="รหัสผ่าน" [(ngModel)]="credential.PASSWORD" name="PASSWORD" required>
+  </p>
+  <p>
+    <button type="submit">ล็อกอิน</button>
+  </p>
+</form>

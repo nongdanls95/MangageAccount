@@ -1,0 +1,35 @@
+﻿{
+  "Security": {
+
+    //บังคับให้เข้าเว็บเป็น https หรือเปล่า
+    "RedirectHttpToHttps": false,
+
+    //ป้องกัน CSRF (ป้องกัน hacker request จาก tab อื่นใน browser เดียวกัน, สำคัญมากในกรณี online banking)
+    //   ถ้าเปิดใช้ แล้วเกิดการ request จาก tab อื่นเกิดขึ้น, ระบบจะคืนค่า CSRF_TOKEN_MISMATCH ให้กับ request นั้นๆ
+    "EnableCSRF": false,
+
+    //ป้องกันการ login ด้วย account เดียวกันซ้ำหลายเครื่อง
+    //   ถ้าเปิดใช้ ผู้ใช้จะสามารถ login ที่เครื่องใหม่ได้ โดยระบบจะคืนค่า DUPLICATE_LOGIN ใน request ของเครื่องที่ login ก่อนหน้าทั้งหมด
+    "EnableDuplicateAuthenChecking": false
+  },
+
+  "Email": {
+    "Server": "10.254.7.15",
+    "Port": 25,
+    "Username": "sendmessage.test2014@gmail.com",
+    "Password": "1234567890qwer",
+    "SenderAddress": "mailservice@cdg.co.th",
+
+    //ถ้าทดลองที่ CDG ต้องปิด SSL เพราะมีปัญหา แต่ที่ Site ต้องลองเปิดดูนะ
+    "EnableSSL":  false
+  },
+
+  "Logs": {
+
+    //Field ไหนที่เราส่งเข้า Store แล้วไม่ต้องการให้ log ลงไฟล์ เช่น Password
+    "HideFields": [ "PASSWORD" ],
+
+    //Field ไหนในในตัวแปร Session ของ ASP.NET ที่จะ show ที่หน้าเว็บ log.aspx ของระบบ
+    "SessionFields": [ "USER_ID" ]
+  }
+}

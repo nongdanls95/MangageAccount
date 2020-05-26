@@ -1,0 +1,43 @@
+﻿{
+  "SessionItemPrefix": "APP_SESSION_",
+  "SessionItems": [
+    {
+      "Name": "USER_ID",
+      "Value": null
+    },
+
+    {
+      "Name": "IS_GUEST",
+      "Value": true
+    },
+
+    {
+      "Name": "CSRF_TOKEN",
+      "Value": null //ค่าจะถูก set ที่ Global.asax
+    },
+
+    {
+      "Name": "AUTHEN_TOKEN",
+      "Value": null //ค่าจะถูก set ตอนผู้ใช้ login
+    }
+
+  ],
+  "ProcedureSessionParameterPrefix": "APP_SESSION_",
+  "ProcedureSessionParameters": [
+    {
+      "Name": "USER_ID",
+      "SessionItemName": "USER_ID",
+      "AutoInclusion": true
+    },
+    {
+      "Name": "CREATOR",
+      "SessionItemName": "USER_ID",
+      "AutoInclusion": false
+    },
+    {
+      "Name": "MODIFIER",
+      "SessionItemName": "USER_ID",
+      "AutoInclusion": false
+    }
+  ]
+}

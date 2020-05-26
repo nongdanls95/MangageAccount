@@ -1,0 +1,4 @@
+<div>
+  <a *ngFor="let system of systems" [routerLink]="system.SYSTEM_ID | lowercase">{{system.SYSTEM_NAME}}</a>
+</div>
+<button (click)="logout()">ออกจากระบบ</button>
